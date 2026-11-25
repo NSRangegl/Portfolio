@@ -1,0 +1,12 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+body{@apply bg-paper text-ink font-sans antialiased;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:56px 56px}
+.cursor{display:inline-block;width:.5em;height:.08em;margin-left:.08em;background:#3DDC97;animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+::selection{background:#3DDC97;color:#0A0E0D}
+:focus-visible{outline:2px solid #0F4C4A;outline-offset:3px}
+.rise{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.rise{animation:none}.cursor{animation:none}}
+.lnk{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .3s}
+.lnk:hover{background-size:100% 1px}
